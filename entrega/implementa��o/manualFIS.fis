@@ -1,0 +1,69 @@
+[System]
+Name='manualFIS'
+Type='sugeno'
+Version=2.0
+NumInputs=4
+NumOutputs=1
+NumRules=5
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='input1'
+Range=[-1 1]
+NumMFs=5
+MF1='C1':'gbellmf',[0.5 3.278 0.0301]
+MF2='C2':'gbellmf',[0.5 2.5 0.2897]
+MF3='C3':'gbellmf',[0.5 2.5 -0.1923]
+MF4='C4':'gbellmf',[0.5 2.5 -0.2653]
+MF5='C5':'gbellmf',[0.5 2.5 0.3283]
+
+[Input2]
+Name='input2'
+Range=[-1 1]
+NumMFs=5
+MF1='C1':'gbellmf',[0.5 2.5 0.0699]
+MF2='C2':'gbellmf',[0.5 2.5 -0.1625]
+MF3='C3':'gbellmf',[0.5 2.5 0.0017]
+MF4='C4':'gbellmf',[0.5 2.5 -0.1341]
+MF5='C5':'gbellmf',[0.5 2.5 0.2139]
+
+[Input3]
+Name='input3'
+Range=[-1 1]
+NumMFs=5
+MF1='C1':'gbellmf',[0.5 2.5 0.0582]
+MF2='C2':'gbellmf',[0.5 2.5 0.0848]
+MF3='C3':'gbellmf',[0.5 2.5 -0.2055]
+MF4='C4':'gbellmf',[0.5 2.5 0.1809]
+MF5='C5':'gbellmf',[0.5 2.5 -0.1597]
+
+[Input4]
+Name='input4'
+Range=[-1 1]
+NumMFs=5
+MF1='C1':'gbellmf',[0.5 2.5 0.0085]
+MF2='C2':'gbellmf',[0.5 2.5 0.2884]
+MF3='C3':'gbellmf',[0.5 2.5 -0.136]
+MF4='C4':'gbellmf',[0.5 2.5 -0.2332]
+MF5='C5':'gbellmf',[0.5 2.5 0.2613]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=5
+MF1='SC1':'constant',[0.0151]
+MF2='SC2':'constant',[0.108]
+MF3='SC3':'constant',[-0.1623]
+MF4='SC4':'constant',[0.3042]
+MF5='SC5':'constant',[-0.339]
+
+[Rules]
+1 1 1 1, 1 (1) : 1
+2 2 2 2, 2 (1) : 1
+3 3 3 3, 3 (1) : 1
+4 4 4 4, 4 (1) : 1
+5 5 5 5, 5 (1) : 1
